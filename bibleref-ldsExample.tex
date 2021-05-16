@@ -1,0 +1,344 @@
+\documentclass{article}
+\usepackage{imakeidx}
+\usepackage[nestedbiblesort]{bibleref-lds}
+\usepackage{verbatim}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage[colorlinks, bookmarks]{hyperref}
+
+\makeindex[title=Scripture References, columns=2]
+
+\biblerefstyle{LDS}
+
+\title{Example of How to Use the \texttt{bibleref-lds} Package}
+\author{Jeremy Lloyd Conlin}
+
+\begin{document}
+\maketitle
+
+\section{Referencing the Books of the Scriptures}
+%\section{Old Testament}
+\begin{table}[h!] \centering
+    \begin{tabular}{rr|rr}
+        \toprule
+        \texttt{bibleverse}   & Printed                    & \texttt{bibleverse}    & Printed \\
+        Name                  & Name                       & Name                   & Name \\
+        \midrule
+        \texttt{Genesis}      & \ibibleverse{Genesis}      & \texttt{Proverbs}      & \ibibleverse{Proverbs} \\
+        \texttt{Exodus}       & \ibibleverse{Exodus}       & \texttt{Ecclesiastes}  & \ibibleverse{Ecclesiastes} \\
+        \texttt{Leviticus}    & \ibibleverse{Leviticus}    & \texttt{SongofSolomon} & \ibibleverse{SongofSolomon} \\
+        \texttt{Numbers}      & \ibibleverse{Numbers}      & \texttt{Isaiah}        & \ibibleverse{Isaiah} \\
+        \texttt{Deuteronomy}  & \ibibleverse{Deuteronomy}  & \texttt{Jeremiah}      & \ibibleverse{Jeremiah} \\
+        \texttt{Joshua}       & \ibibleverse{Joshua}       & \texttt{Lamentations}  & \ibibleverse{Lamentations} \\
+        \texttt{Judges}       & \ibibleverse{Judges}       & \texttt{Ezekiel}       & \ibibleverse{Ezekiel} \\
+        \texttt{Ruth}         & \ibibleverse{Ruth}         & \texttt{Daniel}        & \ibibleverse{Daniel} \\
+        \texttt{ISamuel}      & \ibibleverse{ISamuel}      & \texttt{Hosea}         & \ibibleverse{Hosea} \\
+        \texttt{IISamuel}     & \ibibleverse{IISamuel}     & \texttt{Joel}          & \ibibleverse{Joel} \\
+        \texttt{IKings}       & \ibibleverse{IKings}       & \texttt{Amos}          & \ibibleverse{Amos} \\
+        \texttt{IIKings}      & \ibibleverse{IIKings}      & \texttt{Obadiah}       & \ibibleverse{Obadiah} \\
+        \texttt{IChronicles}  & \ibibleverse{IChronicles}  & \texttt{Jonah}         & \ibibleverse{Jonah} \\
+        \texttt{IIChronicles} & \ibibleverse{IIChronicles} & \texttt{Micah}         & \ibibleverse{Micah} \\
+        \texttt{Ezra}         & \ibibleverse{Ezra}         & \texttt{Nahum}         & \ibibleverse{Nahum} \\
+        \texttt{Nehemiah}     & \ibibleverse{Nehemiah}     & \texttt{Habakkuk}      & \ibibleverse{Habakkuk} \\
+        \texttt{Esther}       & \ibibleverse{Esther}       & \texttt{Zephaniah}     & \ibibleverse{Zephaniah} \\
+        \texttt{Job}          & \ibibleverse{Job}          & \texttt{Haggai}        & \ibibleverse{Haggai} \\
+        \texttt{Psalms}       & \ibibleverse{Psalms}       & \texttt{Zechariah}     & \ibibleverse{Zechariah} \\
+                              &                            & \texttt{Malachi}       & \ibibleverse{Malachi} \\
+        \bottomrule
+    \end{tabular}
+    \caption{Books of the Old Testament}
+    \label{tab:OldTestament}
+\end{table}
+
+%\section{New Testament}
+\begin{table}[h!] \centering
+    \begin{tabular}{rr|rr}
+        \toprule
+        \texttt{bibleverse}      & Printed                       & \texttt{bibleverse} & Printed \\
+        Name                     & Name                          & Name                & Name \\
+        \midrule
+        \texttt{Matthew}         & \ibibleverse{Matthew}         & \texttt{ITimothy}   & \ibibleverse{ITimothy}  \\
+        \texttt{Mark}            & \ibibleverse{Mark}            & \texttt{IITimothy}  & \ibibleverse{IITimothy}  \\
+        \texttt{Luke}            & \ibibleverse{Luke}            & \texttt{Titus}      & \ibibleverse{Titus}  \\
+        \texttt{John}            & \ibibleverse{John}            & \texttt{Philemon}   & \ibibleverse{Philemon}  \\
+        \texttt{Acts}            & \ibibleverse{Acts}            & \texttt{Hebrews}    & \ibibleverse{Hebrews}  \\
+        \texttt{Romans}          & \ibibleverse{Romans}          & \texttt{James}      & \ibibleverse{James}  \\
+        \texttt{ICorinthians}    & \ibibleverse{ICorinthians}    & \texttt{IPeter}     & \ibibleverse{IPeter}  \\
+        \texttt{IICorinthians}   & \ibibleverse{IICorinthians}   & \texttt{IIPeter}    & \ibibleverse{IIPeter}  \\
+        \texttt{Galatians}       & \ibibleverse{Galatians}       & \texttt{IJohn}      & \ibibleverse{IJohn}  \\
+        \texttt{Ephesians}       & \ibibleverse{Ephesians}       & \texttt{IIJohn}     & \ibibleverse{IIJohn}  \\
+        \texttt{Philippians}     & \ibibleverse{Philippians}     & \texttt{IIIJohn}    & \ibibleverse{IIIJohn}  \\
+        \texttt{Colossians}      & \ibibleverse{Colossians}      & \texttt{Jude}       & \ibibleverse{Jude}  \\
+        \texttt{IThessalonians}  & \ibibleverse{IThessalonians}  & \texttt{Revelation} & \ibibleverse{Revelation}  \\
+        \texttt{IIThessalonians} & \ibibleverse{IIThessalonians} &                     & \\
+        \bottomrule
+    \end{tabular}
+    \caption{Books of the New Testament}
+    \label{tab:NewTestament}
+\end{table}
+
+%\section{Book of Mormon}
+\begin{table}[h!] \centering
+    \begin{tabular}{rr|rr}
+        \toprule
+        \texttt{bibleverse}    & Printed                     & \texttt{bibleverse} & Printed \\
+        Name                   & Name                        & Name                & Name \\
+        \midrule
+        \texttt{INephi}        & \ibibleverse{INephi}        & \texttt{Alma}       & \ibibleverse{Alma} \\
+        \texttt{IINephi}       & \ibibleverse{IINephi}       & \texttt{Helaman}    & \ibibleverse{Helaman} \\
+        \texttt{Jacob}         & \ibibleverse{Jacob}         & \texttt{IIINephi}   & \ibibleverse{IIINephi} \\
+        \texttt{Enos}          & \ibibleverse{Enos}          & \texttt{IVNephi}    & \ibibleverse{IVNephi} \\
+        \texttt{Jarom}         & \ibibleverse{Jarom}         & \texttt{Mormon}     & \ibibleverse{Mormon} \\
+        \texttt{Omni}          & \ibibleverse{Omni}          & \texttt{Ether}      & \ibibleverse{Ether} \\
+        \texttt{WordsofMormon} & \ibibleverse{WordsofMormon} & \texttt{Moroni}     & \ibibleverse{Moroni} \\
+        \texttt{Mosiah}        & \ibibleverse{Mosiah}        &                     &                        \\
+        \bottomrule
+    \end{tabular}
+    \caption{Books of the Book of Mormon}
+    \label{tab:BookofMormon}
+\end{table}
+
+%\section{Doctrine and Covenants}
+\begin{table}[h!] \centering
+    \begin{tabular}{rr}
+        \toprule
+        \texttt{bibleverse} & Printed \\
+        Name                & Name \\
+        \midrule
+        \texttt{DoctrineandCovenants} & \ibibleverse{DoctrineandCovenants}  \\
+        \texttt{OfficialDeclaration} & \ibibleverse{OfficialDeclaration} \\
+        \bottomrule
+    \end{tabular}
+    \caption{Doctrine and Covenants}
+    \label{tab:DC}
+\end{table}
+
+%\section{Pearl of Great Price}
+\begin{table}[h!] \centering
+    \begin{tabular}{rr}
+        \toprule
+        \texttt{bibleverse}         & Printed \\
+        Name                        & Name    \\
+        \midrule
+        \texttt{Moses}              & \ibibleverse{Moses}   \\
+        \texttt{Abraham}            & \ibibleverse{Abraham}   \\
+        \texttt{JosephSmithMatthew} & \ibibleverse{JosephSmithMatthew}   \\
+        \texttt{JosephSmithHistory} & \ibibleverse{JosephSmithHistory}   \\
+        \texttt{ArticlesofFaith}    & \ibibleverse{ArticlesofFaith}   \\
+        \bottomrule
+    \end{tabular}
+    \caption{Books of the Pearl of Great Price}
+    \label{tab:PearlofGreatPrice}
+\end{table}
+
+\clearpage
+\section{Abbreviated Books}
+%\section{Old Testament}
+\begin{table}[h!] \centering
+    \begin{tabular}{rr|rr}
+        \toprule
+        Abbreviated    & Printed             & Abbreviated    & Printed \\
+        Name           & Name                & Name           & Name \\
+        \midrule
+        \texttt{Gen}   & \ibibleverse{Gen}   & \texttt{Prov}  & \ibibleverse{Prov}   \\
+        \texttt{Ex}    & \ibibleverse{Ex}    & \texttt{Eccl}  & \ibibleverse{Eccl}   \\
+        \texttt{Lev}   & \ibibleverse{Lev}   & \texttt{Song}  & \ibibleverse{SongofSolomon}   \\
+        \texttt{Num}   & \ibibleverse{Num}   & \texttt{Isa}   & \ibibleverse{Isa}    \\
+        \texttt{Deut}  & \ibibleverse{Deut}  & \texttt{Jer}   & \ibibleverse{Jer}    \\
+        \texttt{Josh}  & \ibibleverse{Josh}  & \texttt{Lam}   & \ibibleverse{Lam}    \\
+        \texttt{Judg}  & \ibibleverse{Judg}  & \texttt{Ezek}  & \ibibleverse{Ezek}   \\
+        \texttt{Ruth}  & \ibibleverse{Ruth}  & \texttt{Dan}   & \ibibleverse{Dan}    \\
+        \texttt{ISam}  & \ibibleverse{ISam}  & \texttt{Hosea} & \ibibleverse{Hosea}  \\
+        \texttt{IISam} & \ibibleverse{IISam} & \texttt{Joel}  & \ibibleverse{Joel}   \\
+        \texttt{IKgs}  & \ibibleverse{IKgs}  & \texttt{Amos}  & \ibibleverse{Amos}   \\
+        \texttt{IIKgs} & \ibibleverse{IIKgs} & \texttt{Obad}  & \ibibleverse{Obad}   \\
+        \texttt{IChr}  & \ibibleverse{IChr}  & \texttt{Jonah} & \ibibleverse{Jonah}  \\
+        \texttt{IIChr} & \ibibleverse{IIChr} & \texttt{Micah} & \ibibleverse{Micah}  \\
+        \texttt{Ezra}  & \ibibleverse{Ezra}  & \texttt{Nahum} & \ibibleverse{Nahum}  \\
+        \texttt{Neh}   & \ibibleverse{Neh}   & \texttt{Hab}   & \ibibleverse{Hab}    \\
+        \texttt{Esth}  & \ibibleverse{Esth}  & \texttt{Zeph}  & \ibibleverse{Zeph}   \\
+        \texttt{Job}   & \ibibleverse{Job}   & \texttt{Hag}   & \ibibleverse{Hag}    \\
+        \texttt{Ps}    & \ibibleverse{Ps}    & \texttt{Zech}  & \ibibleverse{Zech}   \\
+                       &                     & \texttt{Mal}   & \ibibleverse{Mal}    \\
+        \bottomrule
+    \end{tabular}
+    \caption{Abbreviated books of the Old Testament.}
+    \label{tab:OldTestament}
+\end{table}
+
+%\section{New Testament}
+\begin{table}[h!] \centering
+    \begin{tabular}{rr|rr}
+        \toprule
+        Abbreviated     & Printed              & Abbreviated     & Printed \\
+        Name            & Name                 & Name            & Name \\
+        \midrule
+        \texttt{Matt}   & \ibibleverse{Matt}   & \texttt{ITim}   & \ibibleverse{ITim}    \\
+        \texttt{Mark}   & \ibibleverse{Mark}   & \texttt{IITim}  & \ibibleverse{IITim}   \\
+        \texttt{Luke}   & \ibibleverse{Luke}   & \texttt{Titus}  & \ibibleverse{Titus}   \\
+        \texttt{John}   & \ibibleverse{John}   & \texttt{Philem} & \ibibleverse{Philem}  \\
+        \texttt{Acts}   & \ibibleverse{Acts}   & \texttt{Heb}    & \ibibleverse{Heb}     \\
+        \texttt{Rom}    & \ibibleverse{Rom}    & \texttt{James}  & \ibibleverse{James}   \\
+        \texttt{ICor}   & \ibibleverse{ICor}   & \texttt{IPet}   & \ibibleverse{IPet}    \\
+        \texttt{IICor}  & \ibibleverse{IICor}  & \texttt{IIPet}  & \ibibleverse{IIPet}   \\
+        \texttt{Gal}    & \ibibleverse{Gal}    & \texttt{IJn}    & \ibibleverse{IJn}     \\
+        \texttt{Eph}    & \ibibleverse{Eph}    & \texttt{IIJn}   & \ibibleverse{IIJn}    \\
+        \texttt{Philip} & \ibibleverse{Philip} & \texttt{IIIJn}  & \ibibleverse{IIIJn}    \\
+        \texttt{Col}    & \ibibleverse{Col}    & \texttt{Jude}   & \ibibleverse{Jude}    \\
+        \texttt{IThes}  & \ibibleverse{IThes}  & \texttt{Rev}    & \ibibleverse{Rev}     \\
+        \texttt{IIThes} & \ibibleverse{IIThes} &                 & \\
+        \bottomrule
+    \end{tabular}
+    \caption{Abbreviated books of the New Testament.}
+    \label{tab:NewTestament}
+\end{table}
+
+%\section{Book of Mormon}
+\begin{table}[h!] \centering
+    \begin{tabular}{rr|rr}
+        \toprule
+        Abbreviated     & Printed                     & Abbreviated    & Printed \\
+        Name            & Name                        & Name           & Name \\
+        \midrule
+        \texttt{INe}    & \ibibleverse{INe}    & \texttt{Alma}  & \ibibleverse{Alma}   \\
+        \texttt{IINe}   & \ibibleverse{IINe}   & \texttt{Hel}   & \ibibleverse{Hel}    \\
+        \texttt{Jacob}  & \ibibleverse{Jacob}  & \texttt{IIINe} & \ibibleverse{IIINe}  \\
+        \texttt{Enos}   & \ibibleverse{Enos}   & \texttt{IVNe}  & \ibibleverse{IVNe}   \\
+        \texttt{Jarom}  & \ibibleverse{Jarom}  & \texttt{Morm}  & \ibibleverse{Morm}   \\
+        \texttt{Omni}   & \ibibleverse{Omni}   & \texttt{Ether} & \ibibleverse{Ether}  \\
+        \texttt{WofM}   & \ibibleverse{WofM}   & \texttt{Moro}  & \ibibleverse{Moro}   \\
+        \texttt{Mosiah} & \ibibleverse{Mosiah} &                &                      \\
+        \bottomrule
+    \end{tabular}
+    \caption{Abbreviated books of the Book of Mormon.}
+    \label{tab:BookofMormon}
+\end{table}
+
+%\section{Doctrine and Covenants}
+\begin{table}[h!] \centering
+    \begin{tabular}{rr}
+        \toprule
+        Abbreviated & Printed \\
+        Name                & Name \\
+        \midrule
+        \texttt{DC} & \ibibleverse{DC}  \\
+        \texttt{OD} & \ibibleverse{OD} \\
+        \bottomrule
+    \end{tabular}
+    \caption{Doctrine and Covenants abbreviations.}
+    \label{tab:DC}
+\end{table}
+
+%\section{Pearl of Great Price}
+\begin{table}[h!] \centering
+    \begin{tabular}{rr}
+        \toprule
+        Abbreviated         & Printed \\
+        Name                        & Name    \\
+        \midrule
+        \texttt{Moses}              & \ibibleverse{Moses}   \\
+        \texttt{Abr}            & \ibibleverse{Abraham}   \\
+        \texttt{JS-M} & \ibibleverse{JSM}   \\
+        \texttt{JS-H} & \ibibleverse{JSH}   \\
+        \texttt{AofF}    & \ibibleverse{AofF}   \\
+        \bottomrule
+    \end{tabular}
+    \caption{Abbreviated books of the Pearl of Great Price.}
+    \label{tab:PearlofGreatPrice}
+\end{table}
+
+\printindex
+\end{document}
+
+Gen.	Genesis
+Ex.	    Exodus
+Lev.	Leviticus
+Num.	Numbers
+Deut.	Deuteronomy
+Josh.	Joshua
+Judg.	Judges
+Ruth	Ruth
+1 Sam.	1 Samuel
+2 Sam.	2 Samuel
+1 Kgs.	1 Kings
+2 Kgs.	2 Kings
+1 Chr.	1 Chronicles
+2 Chr.	2 Chronicles
+Ezra	Ezra
+Neh.	Nehemiah
+Esth.	Esther
+Job	    Job
+Ps.	    Psalms
+Prov.	Proverbs
+Eccl.	Ecclesiastes
+Song.	Song of Solomon
+Isa.	Isaiah
+Jer.	Jeremiah
+Lam.	Lamentations
+Ezek.	Ezekiel
+Dan.	Daniel
+Hosea	Hosea
+Joel	Joel
+Amos	Amos
+Obad.	Obadiah
+Jonah	Jonah
+Micah	Micah
+Nahum	Nahum
+Hab.	Habakkuk
+Zeph.	Zephaniah
+Hag.	Haggai
+Zech.	Zechariah
+Mal.	Malachi
+
+Matt.	Matthew
+Mark	Mark
+Luke	Luke
+John	John
+Acts	Acts of the Apostles
+Rom.	Romans
+1 Cor.	1 Corinthians
+2 Cor.	2 Corinthians
+Gal.	Galatians
+Eph.	Ephesians
+Philip.	Philippians
+Col.	Colossians
+1 Thes.	1 Thessalonians
+2 Thes.	2 Thessalonians
+1 Tim.	1 Timothy
+2 Tim.	2 Timothy
+Titus	Titus
+Philem.	Philemon
+Heb.	Hebrews
+James	James
+1 Pet.	1 Peter
+2 Pet.	2 Peter
+1 Jn.	1 John
+2 Jn.	2 John
+3 Jn.	3 John
+Jude	Jude
+Rev.	Revelation
+
+1 Ne.	1 Nephi
+2 Ne.	2 Nephi
+Jacob	Jacob
+Enos	Enos
+Jarom	Jarom
+Omni	Omni
+W of M	Words of Mormon
+Mosiah	Mosiah
+Alma	Alma
+Hel.	Helaman
+3 Ne.	3 Nephi
+4 Ne.	4 Nephi
+Morm.	Mormon
+Ether	Ether
+Moro.	Moroni
+
+D&C	    Doctrine and Covenants
+OD	    Official Declaration
+
+Moses	Moses
+Abr.	Abraham
+JS—M	Joseph Smith—Matthew
+JS—H	Joseph Smith—History
+A of F	The Articles of Faith
