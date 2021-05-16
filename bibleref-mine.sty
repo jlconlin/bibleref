@@ -1,0 +1,382 @@
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{bibleref-lds}[2011/12/05 LDS style of bibleref package]
+
+% Load the bibleref package and pass any given options to it
+\RequirePackage{bibleref}
+
+% Sort the books in the index based upon the order of the books rather than in
+% alphabetical order
+\DeclareOption{biblesort}{%
+    \biblerefmap{Genesis}{01}
+    \biblerefmap{Exodus}{02}
+    \biblerefmap{Leviticus}{03}
+    \biblerefmap{Numbers}{04}
+    \biblerefmap{Deuteronomy}{05}
+    \biblerefmap{Joshua}{06}
+    \biblerefmap{Judges}{07}
+    \biblerefmap{Ruth}{08}
+    \biblerefmap{ISamuel}{09}
+    \biblerefmap{IISamuel}{10}
+    \biblerefmap{IKings}{11}
+    \biblerefmap{IIKings}{12}
+    \biblerefmap{IChronicles}{13}
+    \biblerefmap{IIChronicles}{14}
+    \biblerefmap{Ezra}{15}
+    \biblerefmap{Nehemiah}{16}
+    \biblerefmap{Esther}{17}
+    \biblerefmap{Job}{18}
+    \biblerefmap{Psalms}{19}
+    \biblerefmap{Proverbs}{20}
+    \biblerefmap{Ecclesiastes}{21}
+    \biblerefmap{SongofSolomon}{22}
+    \biblerefmap{Isaiah}{23}
+    \biblerefmap{Jeremiah}{24}
+    \biblerefmap{Lamentations}{25}
+    \biblerefmap{Ezekiel}{26}
+    \biblerefmap{Daniel}{27}
+    \biblerefmap{Hosea}{28}
+    \biblerefmap{Joel}{29}
+    \biblerefmap{Amos}{30}
+    \biblerefmap{Obadiah}{31}
+    \biblerefmap{Jonah}{32}
+    \biblerefmap{Micah}{33}
+    \biblerefmap{Nahum}{34}
+    \biblerefmap{Habakkuk}{35}
+    \biblerefmap{Zephaniah}{36}
+    \biblerefmap{Haggai}{37}
+    \biblerefmap{Zechariah}{38}
+    \biblerefmap{Malachi}{39}
+
+    \biblerefmap{Matthew}{40}
+    \biblerefmap{Mark}{41}
+    \biblerefmap{Luke}{42}
+    \biblerefmap{John}{43}
+    \biblerefmap{Acts}{44}
+    \biblerefmap{Romans}{45}
+    \biblerefmap{ICorinthians}{46}
+    \biblerefmap{IICorinthians}{47}
+    \biblerefmap{Galatians}{48}
+    \biblerefmap{Ephesians}{49}
+    \biblerefmap{Philippians}{50}
+    \biblerefmap{Colossians}{51}
+    \biblerefmap{IThessalonians}{52}
+    \biblerefmap{IIThessalonians}{53}
+    \biblerefmap{ITimothy}{54}
+    \biblerefmap{IITimothy}{55}
+    \biblerefmap{Titus}{56}
+    \biblerefmap{Philemon}{57}
+    \biblerefmap{Hebrews}{58}
+    \biblerefmap{James}{59}
+    \biblerefmap{IPeter}{60}
+    \biblerefmap{IIPeter}{61}
+    \biblerefmap{IJohn}{62}
+    \biblerefmap{IIJohn}{63}
+    \biblerefmap{IIIJohn}{64}
+    \biblerefmap{Jude}{65}
+    \biblerefmap{Revelation}{66}
+
+    \biblerefmap{INephi}{67}
+    \biblerefmap{IINephi}{68}
+    \biblerefmap{Jacob}{69}
+    \biblerefmap{Enos}{70}
+    \biblerefmap{Jarom}{71}
+    \biblerefmap{Omni}{72}
+    \biblerefmap{WordsofMormon}{73}
+    \biblerefmap{Mosiah}{74}
+    \biblerefmap{Alma}{75}
+    \biblerefmap{Helaman}{76}
+    \biblerefmap{IIINephi}{77}
+    \biblerefmap{IVNephi}{78}
+    \biblerefmap{Mormon}{79}
+    \biblerefmap{Ether}{80}
+    \biblerefmap{Moroni}{81}
+
+    \biblerefmap{DoctrineandCovenants}{82}
+    \biblerefmap{OfficialDeclaration}{83}
+
+    \biblerefmap{Moses}{84}
+    \biblerefmap{Abraham}{85}
+    \biblerefmap{JosephSmithMatthew}{86}
+    \biblerefmap{JosephSmithHistory}{87}
+    \biblerefmap{ArticlesofFaith}{88}
+}
+
+% Sort the books in the index based upon the order of the books rather than in
+% alphabetical order.  Also make the books be a subitem of the larger volume, 
+% e.g., Matthew is a subitem of the New Testament and Moroni is a subitem of the 
+% Book of Mormon
+\DeclareOption{nestedbiblesort}{%
+    \biblerefmap{Genesis}{1@Old Testament!01}
+    \biblerefmap{Exodus}{1@Old Testament!02}
+    \biblerefmap{Leviticus}{1@Old Testament!03}
+    \biblerefmap{Numbers}{1@Old Testament!04}
+    \biblerefmap{Deuteronomy}{1@Old Testament!05}
+    \biblerefmap{Joshua}{1@Old Testament!06}
+    \biblerefmap{Judges}{1@Old Testament!07}
+    \biblerefmap{Ruth}{1@Old Testament!08}
+    \biblerefmap{ISamuel}{1@Old Testament!09}
+    \biblerefmap{IISamuel}{1@Old Testament!10}
+    \biblerefmap{IKings}{1@Old Testament!11}
+    \biblerefmap{IIKings}{1@Old Testament!12}
+    \biblerefmap{IChronicles}{1@Old Testament!13}
+    \biblerefmap{IIChronicles}{1@Old Testament!14}
+    \biblerefmap{Ezra}{1@Old Testament!15}
+    \biblerefmap{Nehemiah}{1@Old Testament!16}
+    \biblerefmap{Esther}{1@Old Testament!17}
+    \biblerefmap{Job}{1@Old Testament!18}
+    \biblerefmap{Psalms}{1@Old Testament!19}
+    \biblerefmap{Proverbs}{1@Old Testament!20}
+    \biblerefmap{Ecclesiastes}{1@Old Testament!21}
+    \biblerefmap{SongofSolomon}{1@Old Testament!22}
+    \biblerefmap{Isaiah}{1@Old Testament!23}
+    \biblerefmap{Jeremiah}{1@Old Testament!24}
+    \biblerefmap{Lamentations}{1@Old Testament!25}
+    \biblerefmap{Ezekiel}{1@Old Testament!26}
+    \biblerefmap{Daniel}{1@Old Testament!27}
+    \biblerefmap{Hosea}{1@Old Testament!28}
+    \biblerefmap{Joel}{1@Old Testament!29}
+    \biblerefmap{Amos}{1@Old Testament!30}
+    \biblerefmap{Obadiah}{1@Old Testament!31}
+    \biblerefmap{Jonah}{1@Old Testament!32}
+    \biblerefmap{Micah}{1@Old Testament!33}
+    \biblerefmap{Nahum}{1@Old Testament!34}
+    \biblerefmap{Habakkuk}{1@Old Testament!35}
+    \biblerefmap{Zephaniah}{1@Old Testament!36}
+    \biblerefmap{Haggai}{1@Old Testament!37}
+    \biblerefmap{Zechariah}{1@Old Testament!38}
+    \biblerefmap{Malachi}{1@Old Testament!39}
+
+    \biblerefmap{Matthew}{2@New Testament!1}
+    \biblerefmap{Mark}{2@New Testament!2}
+    \biblerefmap{Luke}{2@New Testament!3}
+    \biblerefmap{John}{2@New Testament!4}
+    \biblerefmap{Acts}{2@New Testament!5}
+    \biblerefmap{Romans}{2@New Testament!6}
+    \biblerefmap{ICorinthians}{2@New Testament!7}
+    \biblerefmap{IICorinthians}{2@New Testament!8}
+    \biblerefmap{Galatians}{2@New Testament!9}
+    \biblerefmap{Ephesians}{2@New Testament!10}
+    \biblerefmap{Philippians}{2@New Testament!11}
+    \biblerefmap{Colossians}{2@New Testament!12}
+    \biblerefmap{IThessalonians}{2@New Testament!13}
+    \biblerefmap{IIThessalonians}{2@New Testament!14}
+    \biblerefmap{ITimothy}{2@New Testament!15}
+    \biblerefmap{IITimothy}{2@New Testament!16}
+    \biblerefmap{Titus}{2@New Testament!17}
+    \biblerefmap{Philemon}{2@New Testament!18}
+    \biblerefmap{Hebrews}{2@New Testament!19}
+    \biblerefmap{James}{2@New Testament!20}
+    \biblerefmap{IPeter}{2@New Testament!21}
+    \biblerefmap{IIPeter}{2@New Testament!22}
+    \biblerefmap{IJohn}{2@New Testament!23}
+    \biblerefmap{IIJohn}{2@New Testament!24}
+    \biblerefmap{IIIJohn}{2@New Testament!25}
+    \biblerefmap{Jude}{2@New Testament!26}
+    \biblerefmap{Revelation}{2@New Testament!27}
+
+    \biblerefmap{INephi}{3@Book of Mormon!01}
+    \biblerefmap{IINephi}{3@Book of Mormon!02}
+    \biblerefmap{Jacob}{3@Book of Mormon!03}
+    \biblerefmap{Enos}{3@Book of Mormon!04}
+    \biblerefmap{Jarom}{3@Book of Mormon!05}
+    \biblerefmap{Omni}{3@Book of Mormon!06}
+    \biblerefmap{Words of Mormon}{3@Book of Mormon!07}
+    \biblerefmap{Mosiah}{3@Book of Mormon!08}
+    \biblerefmap{Alma}{3@Book of Mormon!09}
+    \biblerefmap{Helaman}{3@Book of Mormon!10}
+    \biblerefmap{IIINephi}{3@Book of Mormon!11}
+    \biblerefmap{IVNephi}{3@Book of Mormon!12}
+    \biblerefmap{Mormon}{3@Book of Mormon!13}
+    \biblerefmap{Ether}{3@Book of Mormon!14}
+    \biblerefmap{Moroni}{3@Book of Mormon!15}
+
+    \biblerefmap{DoctrineandCovenants}{4}
+    \biblerefmap{OfficialDeclaration}{5}
+
+    \biblerefmap{Moses}{6@Pearl of Great Price!1}
+    \biblerefmap{Abraham}{6@Pearl of Great Price!2}
+    \biblerefmap{JosephSmithMatthew}{6@Pearl of Great Price!3}
+    \biblerefmap{JosephSmithHistory}{6@Pearl of Great Price!4}
+    \biblerefmap{ArticlesofFaith}{6@Pearl of Great Price!6}
+}
+
+\ProcessOptions\relax
+
+% Define the style for this package
+\newbiblerefstyle{LDS}{%
+%
+\renewcommand*{\brfullname}{%
+% Old Testament
+\def\br@Genesis{\BRbookof Genesis}%
+\def\br@Exodus{\BRbookof Exodus}%
+\def\br@Leviticus{\BRbookof Leviticus}%
+\def\br@Numbers{\BRbookof Numbers}%
+\def\br@Deuteronomy{\BRbookof Deuteronomy}%
+\def\br@Joshua{\BRbookof Joshua}%
+\def\br@Judges{\BRbookof Judges}%
+\def\br@Ruth{\BRbookof Ruth}%
+\def\br@ISamuel{\BRbooknumberstyle{1}\BRbookof  Samuel}%
+\def\br@IISamuel{\BRbooknumberstyle{2}\BRbookof  Samuel}%
+\def\br@IKings{\BRbooknumberstyle{1}\BRbookof  Kings}%
+\def\br@IIKings{\BRbooknumberstyle{2}\BRbookof  Kings}%
+\def\br@IChronicles{\BRbooknumberstyle{1}\BRbookof  Chronicles}%
+\def\br@IIChronicles{\BRbooknumberstyle{2}\BRbookof  Chronicles}%
+\def\br@Ezra{\BRbookof Ezra}%
+\def\br@Nehemiah{\BRbookof Nehemiah}%
+\def\br@Esther{\BRbookof Esther}%
+\def\br@Job{\BRbookof Job}%
+\def\br@Psalms{\BRbookof Psalms}%
+\def\br@Proverbs{\BRbookof Proverbs}%
+\def\br@Ecclesiastes{\BRbookof Ecclesiastes}%
+\def\br@SongofSolomon{\BRbookof Song of Solomon}%
+\def\br@Isaiah{\BRbookof Isaiah}%
+\def\br@Jeremiah{\BRbookof Jeremiah}%
+\def\br@Lamentations{\BRbookof Lamentations}%
+\def\br@Ezekiel{\BRbookof Ezekiel}%
+\def\br@Daniel{\BRbookof Daniel}%
+\def\br@Hosea{\BRbookof Hosea}%
+\def\br@Joel{\BRbookof Joel}%
+\def\br@Amos{\BRbookof Amos}%
+\def\br@Obadiah{\BRbookof Obadiah}%
+\def\br@Jonah{\BRbookof Jonah}%
+\def\br@Micah{\BRbookof Micah}%
+\def\br@Nahum{\BRbookof Nahum}%
+\def\br@Habakkuk{\BRbookof Habakkuk}%
+\def\br@Zephaniah{\BRbookof Zephaniah}%
+\def\br@Haggai{\BRbookof Haggai}%
+\def\br@Zechariah{\BRbookof Zechariah}%
+\def\br@Malachi{\BRbookof Malachi}%
+%
+% New Testament
+\def\br@Matthew{\BRbookof Matthew}%
+\def\br@Mark{\BRbookof Mark}%
+\def\br@Luke{\BRbookof Luke}%
+\def\br@John{\BRbookof John}%
+\def\br@Acts{\BRbookof Acts of the Apostles}%
+\def\br@Romans{\BRbookof Romans}%
+\def\br@ICorinthians{\BRbooknumberstyle{1}\BRbookof  Corinthians}%
+\def\br@IICorinthians{\BRbooknumberstyle{2}\BRbookof  Corinthians}%
+\def\br@Galatians{\BRbookof Galatians}%
+\def\br@Ephesians{\BRbookof Ephesians}%
+\def\br@Philippians{\BRbookof Philippians}%
+\def\br@Colossians{\BRbookof Colossians}%
+\def\br@IThessalonians{\BRbooknumberstyle{1}\BRbookof  Thessalonians}%
+\def\br@IIThessalonians{\BRbooknumberstyle{2}\BRbookof  Thessalonians}%
+\def\br@ITimothy{\BRbooknumberstyle{1}\BRbookof  Timothy}%
+\def\br@IITimothy{\BRbooknumberstyle{2}\BRbookof  Timothy}%
+\def\br@Titus{\BRbookof Titus}%
+\def\br@Philemon{\BRbookof Philemon}%
+\def\br@Hebrews{\BRbookof Hebrews}%
+\def\br@James{\BRbookof James}%
+\def\br@IPeter{\BRbooknumberstyle{1}\BRbookof  Peter}%
+\def\br@IIPeter{\BRbooknumberstyle{2}\BRbookof  Peter}%
+\def\br@IJohn{\BRbooknumberstyle{1}\BRbookof  John}%
+\def\br@IIJohn{\BRbooknumberstyle{2}\BRbookof  John}%
+\def\br@IIIJohn{\BRbooknumberstyle{3}\BRbookof  John}%
+\def\br@Jude{\BRbookof Jude}%
+\def\br@Revelation{\BRbookof Revelation}%
+%
+% Book of Mormon
+\def\br@INephi{\BRbooknumberstyle{1}\BRbookof Nephi}%
+\def\br@IINephi{\BRbooknumberstyle{2}\BRbookof Nephi}%
+\def\br@Jacob{\BRbookof Jacob}%
+\def\br@Enos{\BRbookof Enos}%
+\def\br@Jarom{\BRbookof Jarom}%
+\def\br@Omni{\BRbookof Omni}%
+\def\br@WordsofMormon{\BRbookof Words Of Mormon}%
+\def\br@Mosiah{\BRbookof Mosiah}%
+\def\br@Alma{\BRbookof Alma}%
+\def\br@Helaman{\BRbookof Helaman}%
+\def\br@IIINephi{\BRbooknumberstyle{3}\BRbookof Nephi}%
+\def\br@IVNephi{\BRbooknumberstyle{4}\BRbookof Nephi}%
+\def\br@Mormon{\BRbookof Mormon}%
+\def\br@Ether{\BRbookof Ether}%
+\def\br@Moroni{\BRbookof Moroni}%
+%
+% Doctrine and Covenants
+\def\br@DoctrineandCovenants{Doctrine and Covenants}%
+\def\br@OfficialDeclaration{Official Declaration}%
+%
+% Pearl of Great Price
+\def\br@Moses{\BRbookof Moses}%
+\def\br@Abraham{\BRbookof Abraham}%
+\def\br@JosephSmithHistory{Joseph Smith-History}%
+\def\br@JosephSmithMatthew{Joseph Smith-Matthew}%
+\def\br@ArticlesofFaith{Articles of Faith}}%
+\brfullname
+%
+% Define standard LDS abbreviations
+\renewcommand*{\brabbrvname}{%
+\def\br@Gen{\br@Genesis}%
+\def\br@Ex{\br@Exodus}%
+\def\br@Lev{\br@Leviticus}%
+\def\br@Num{\br@Numbers}%
+\def\br@Deut{\br@Deuteronomy}%
+\def\br@Josh{\br@Joshua}%
+\def\br@Judg{\br@Judges}%
+\def\br@ISam{\br@ISamuel}%
+\def\br@IISam{\br@IISamuel}%
+\def\br@IKgs{\br@IKings}%
+\def\br@IIKgs{\br@IIKings}%
+\def\br@IChr{\br@IChronicles}%
+\def\br@IIChr{\br@IIChronicles}%
+\def\br@Neh{\br@Nehemiah}%
+\def\br@Esth{\br@Esther}%
+\def\br@Ps{\br@Psalms}%
+\def\br@Prov{\br@Proverbs}%
+\def\br@Eccl{\br@Ecclesiastes}%
+\def\br@Song{\br@SongofSolomon}%
+\def\br@Isa{\br@Isaiah}%
+\def\br@Jer{\br@Jeremiah}%
+\def\br@Lam{\br@Lamentations}%
+\def\br@Ezek{\br@Ezekiel}%
+\def\br@Dan{\br@Daniel}%
+\def\br@Obad{\br@Obadiah}%
+\def\br@Hab{\br@Habakkuk}%
+\def\br@Zeph{\br@Zephaniah}%
+\def\br@Hag{\br@Haggai}%
+\def\br@Zech{\br@Zechariah}%
+\def\br@Mal{\br@Malachi}%
+%
+\def\br@Matt{\br@Matthew}%
+\def\br@Rom{\br@Romans}%
+\def\br@ICor{\br@ICorinthians}%
+\def\br@IICor{\br@IICorinthians}%
+\def\br@Gal{\br@Galatians}%
+\def\br@Eph{\br@Ephesians}%
+\def\br@Philip{\br@Philippians}%
+\def\br@Col{\br@Colossians}%
+\def\br@IThes{\br@IThessalonians}%
+\def\br@IIThes{\br@IIThessalonians}%
+\def\br@ITim{\br@ITimothy}%
+\def\br@IITim{\br@IITimothy}%
+\def\br@Philem{\br@Philemon}%
+\def\br@Heb{\br@Hebrews}%
+\def\br@IPet{\br@IPeter}%
+\def\br@IIPet{\br@IIPeter}%
+\def\br@IJn{\br@IJohn}%
+\def\br@IIJn{\br@IIJohn}%
+\def\br@IIIJn{\br@IIIJohn}%
+\def\br@Rev{\br@Revelation}%
+%
+\def\br@INe{\br@INephi}%
+\def\br@IINe{\br@IINephi}%
+\def\br@WofM{\br@WordsofMormon}%
+\def\br@Hel{\br@Helaman}%
+\def\br@IIINe{\br@IIINephi}%
+\def\br@IVNe{\br@IVNephi}%
+\def\br@Morm{\br@Mormon}%
+\def\br@Moro{\br@Moroni}%
+%
+\def\br@DC{\br@DoctrineandCovenants}%
+\def\br@OD{\br@OfficialDeclaration}%
+%
+\def\br@Abr{\br@Abraham}
+\def\br@JSM{\br@JosephSmithMatthew}%
+\def\br@JSH{\br@JosephSmithHistory}%
+\def\br@AofF{\br@ArticlesofFaith}}
+\brabbrvname
+}
+
+\endinput
